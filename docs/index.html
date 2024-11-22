@@ -155,10 +155,10 @@
 						<p>Don’t hesitate to get in touch with me. I’m always happy to hear from you and discuss new 
 						opportunities or ideas.</p>
 				
-						<form method="post" action="mailto:cristinamv10@gmail.com" enctype="text/plain">
+						<form method="post" action=send() enctype="text/plain">
 							<div class="row">
 							  <div class="col-6 col-12-mobile">
-								<input type="text" name="subject" placeholder="Name" />
+								<input type="subject" name="subject" placeholder="Subject" />
 							  </div>
 							  <div class="col-6 col-12-mobile">
 								<input type="text" name="email" placeholder="Email" />
@@ -171,6 +171,16 @@
 							  </div>
 							</div>
 						  </form>
+						  <script>
+							function send(){
+							  let form = document.getElementById("frm1"); //obtiene el elemento form
+							  let act = "mailto:sender2@bbb.com"  // El correo al que va dirigido
+							  act += "?subject="+document.getElementById("subject").value // ponemos el asunto que haya escrito
+							  act += "&body="+document.getElementById("message").value  //ponemos el cuerpo del mensaje
+							  form.action = act; //setea la acción del formulario
+							  form.submit() //realiza la acción
+							}
+							</script>
 				
 					</div>
 				</section>
