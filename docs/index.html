@@ -1,181 +1,193 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Cristina Mora Porfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristina Mora Portfolio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <style>
+    /* All styles remain unchanged */
+    #hero { background-color: #7e22ce; }
+    .typewriter h2 { display: inline-block; overflow: hidden; white-space: nowrap; border-right: .15em solid #facc15; animation: typing 4s steps(30,end), blink-caret .75s step-end infinite; line-height:1.2; }
+    @keyframes typing { from{width:0;} to{width:100%;} }
+    @keyframes blink-caret { from,to{border-color:transparent;} 50%{border-color:#facc15;} }
+    .scroll-down { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); animation:bounce 2s infinite; }
+    @keyframes bounce{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,-10px);} }
+    nav ul li a{position:relative;} nav ul li a::after{content:'';position:absolute;width:0;height:2px;background:#4f46e5;left:50%;bottom:-4px;transition:width .3s ease,left .3s ease;} nav ul li a:hover::after,nav ul li a.active::after{width:100%;left:0;}
+    .avatar:hover{animation:wiggle 1s ease-in-out;} @keyframes wiggle{0%,100%{transform:rotate(0);}25%{transform:rotate(2deg);}75%{transform:rotate(-2deg);} }
+    #hero h2,#hero p{text-shadow:0 2px 4px rgba(0,0,0,0.3);}
+    .typewriter::-webkit-scrollbar{width:0;height:0;}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.001ms!important;animation-iteration-count:1!important;}}
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <img src="images/avatar.jpg" alt="Avatar" class="w-10 h-10 rounded-full avatar">
+        <h1 class="text-xl font-bold">Cristina Mora</h1>
+      </div>
+      <nav>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#hero" class="nav-link hover:text-blue-500">Home</a></li>
+          <li><a href="#about" class="nav-link hover:text-blue-500">About Me</a></li>
+          <li><a href="#portfolio" class="nav-link hover:text-blue-500">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link hover:text-blue-500">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white md:hidden">
+      <ul class="flex flex-col p-4 space-y-2">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-		<!-- Header -->
-			<div id="header">
+  <main class="pt-24 relative">
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
+      <div class="text-center px-4 typewriter">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4 inline-block">Hi! I'm <span class="text-yellow-300">Cristina Mora</span></h2>
+      </div>
+      <p class="text-lg md:text-2xl mt-4 opacity-0" data-aos="fade-in" data-aos-delay="800">A passionate Videogame Developer. Welcome to my personal portfolio!</p>
+      <a href="#portfolio" class="mt-8 inline-block px-8 py-4 bg-yellow-300 text-purple-700 font-semibold rounded-full hover:scale-105 transform transition animate-bounce opacity-0" data-aos="fade-in" data-aos-delay="1200">See Projects</a>
+      <div class="scroll-down">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </section>
 
-				<div class="top">
+    <!-- About -->
+    <section id="about" class="py-20 bg-white" data-aos="fade-right">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+        <img src="images/pic08.jpg" alt="Cristina Mora" class="w-48 h-48 rounded-full shadow-lg">
+        <div>
+          <h3 class="text-3xl font-bold mb-4">About Me</h3>
+          <p class="leading-relaxed">I am an energetic and enthusiastic person with a strong initiative, always ready to face new challenges. With experience working both independently and as part of a team, I value collaboration and effective communication to achieve common goals. My creativity allows me to generate solutions and contribute ideas from different perspectives, while my focus on concentration and organization helps me tackle complex projects efficiently and in an organized way. I am committed to quality, continuous improvement, and constant learning, which enables me to solve technical challenges effectively.
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">CRISTINA MORA VELASCO</h1>
-							<p>Videogame Developer</p>
-						</div>
+On a personal note, I have always enjoyed art and crafts. While I don't consider myself an artist, I believe I could thrive in a role that blends creativity with technical problem-solving.</p>
+          <a href="arte.html" class="inline-block mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">See My Art</a>
+        </div>
+      </div>
+    </section>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>								
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-20 bg-gray-100" data-aos="fade-left">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-8 text-center">My Portfolio</h3>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+         
+           <!-- VERY REAL -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+              <a href="VERYREAL.html">
+                <img src="images/pic02.jpg" alt="VERY REAL" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold">VERY REAL</h4>
+                </div>
+              </a>
+            </div>
 
-				</div>
+            <!-- Pinball -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+              <a href="PINBALL.html">
+                <img src="images/pic07.jpg" alt="Pinball" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold">Pinball</h4>
+                </div>
+              </a>
+            </div>
 
-				<div class="bottom">
+            <!-- Neon Rising -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+              <a href="NEONRISING.html">
+                <img src="images/pic03.jpg" alt="Neon Rising" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold">Neon Rising</h4>
+                </div>
+              </a>
+            </div>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/cristina-mora-velasco/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://discord.com/users/753263537752768642/" target="_blank" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-							<li><a href="https://github.com/CristinaMora" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="cristinamv10@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="tel:+34664638811" class="icon solid fa-phone"><span class="label">Telephone</span></a></li>
-						</ul>
+            <!-- Amon-ra -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+              <a href="AMONRA.html">
+                <img src="images/pic10.jpg" alt="Amon-ra" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold">Amon-ra</h4>
+                </div>
+              </a>
+            </div>
 
-				</div>
+            <!-- Asteroids -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+              <a href="ASTEROIDS.html">
+                <img src="images/pic04.jpg" alt="Asteroids" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold">Asteroids</h4>
+                </div>
+              </a>
+            </div>
 
-			</div>
+            <!-- Stress Out -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+              <a href="STRESSOUT.html">
+                <img src="images/pic09.jpg" alt="Stress Out" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold">Stress Out</h4>
+                </div>
+              </a>
+            </div>
 
-		<!-- Main -->
-			<div id="main">
+        </div>
+        
+     
+      </div>
+    </section>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4 max-w-xl">
+        <h3 class="text-3xl font-bold mb-6 text-center">Contact</h3>
+        <form onsubmit="event.preventDefault(); const n=this.querySelector('[name=name]').value; const e=this.querySelector('[name=email]').value; const m=this.querySelector('[name=message]').value; window.location.href=`mailto:cristinamv10@gmail.com?subject=Message from ${encodeURIComponent(n)}&body=From: ${encodeURIComponent(n)} (${encodeURIComponent(e)})%0D%0A%0D%0A${encodeURIComponent(m)}`;" class="space-y-4">
+          <input name="name" type="text" placeholder="Name" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-300">
+          <input name="email" type="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-300">
+          <textarea name="message" placeholder="Message" rows="5" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-300"></textarea>
+          <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Cristina</strong>, a passionate <strong>Videogame Developer</strong>.<br />
-								Welcome to my personal portfolio!</h2>
-								<p>Explore my portfolio to see the games and projects I have developed, and feel free to contact me if you like my work</p>
-							</header>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-6">
+    <div class="container mx-auto px-4 flex justify-center space-x-6">
+      <a href="https://www.linkedin.com/in/cristina-mora-velasco" class="hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="https://discord.com/users/753263537752768642" class="hover:text-white"><i class="fab fa-discord fa-lg"></i></a>
+      <a href="https://github.com/CristinaMora" class="hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+      <a href="mailto:cristinamv10@gmail.com" class="hover:text-white"><i class="fas fa-envelope fa-lg"></i></a>
+      <a href="tel:+34664638811" class="hover:text-white"><i class="fas fa-phone fa-lg"></i></a>
+    </div>
+  </footer>
 
-					
-						</div>
-					</section>
-					<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p> I am an energetic and enthusiastic person with a strong initiative, always ready to face new challenges. With experience working both independently and as part of a team, I value collaboration and effective communication to achieve common goals. My creativity allows me to generate solutions and contribute ideas from different perspectives, while my focus on concentration and organization helps me tackle complex projects efficiently and in an organized way. I am committed to quality, continuous improvement, and constant learning, which enables me to solve technical challenges effectively. </p> <p> On a personal note, I have always enjoyed art and crafts. While I don't consider myself an artist, I believe I could thrive in a role that blends creativity with technical problem-solving. </p>
-							<footer>
-								<a href="arte.html" target="_blank"  class="button scrolly">MY ART</a>
-							</footer>
-						</div>
-					</section>
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Portfolio</h2>
-							</header>
-
-							<p>In this section, you will find a selection of my most outstanding projects, where I apply my knowledge in video game development. 
-								From platformer games to a custom game engine, this portfolio showcases my growth as a developer and my commitment.</p>
-
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="VERYREAL.html" class="image fit"><img src="images/pic02.jpg" /></a>
-										<header>
-											<h3>VERY REAL</h3>
-										</header>
-									</article>
-									<article class="item">
-											<a href="PINBALL.html" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-											<header>
-												<h3>Pinball</h3>
-											</header>
-										</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="NEONRISING.html" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Neon Rising</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="AMONRA.html" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										<header>
-											<h3>Amon-ra</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="ASTEROIDS.html" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Asteroids</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="STRESSOUT.html" class="image fit"><img src="images/pic09.jpg" alt="" /></a>
-										<header>
-											<h3>Stress Out</h3>
-										</header>
-									</article>
-									
-								</div>
-							</div>
-
-						</div>
-					</section>
-				<!-- Contact -->
-				<section id="contact" class="four">
-					<div class="container">
-				
-						<header>
-							<h2>Contact</h2>
-						</header>
-				
-						<p>Don’t hesitate to get in touch with me. I’m always happy to hear from you and discuss new 
-						opportunities or ideas.</p>
-				
-						<form method="post" action="mailto:cristinamv10@gmail.com">
-							<div class="row">
-								<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-								<div class="col-12">
-									<textarea name="message" placeholder="Message"></textarea>
-								</div>
-								<div class="col-12">
-									<input type="submit" value="Send Message" />
-								</div>
-							</div>
-						</form>
-				
-					</div>
-				</section>
-
-			</div>
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    const sections=document.querySelectorAll('section'); const navLinks=document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll',()=>{let current=''; sections.forEach(sec=>{const top=window.scrollY; const offset=sec.offsetTop-100; if(top>=offset)current=sec.id}); navLinks.forEach(link=>{link.classList.remove('active'); if(link.getAttribute('href')==='#'+current)link.classList.add('active')})});
+  </script>
+</body>
 </html>
