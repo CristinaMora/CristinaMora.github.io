@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cristina Mora Portfolio</title>
+  <link rel="icon" href="images/Cletter.jpg" type="image/jpeg">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- AOS Animations -->
@@ -36,6 +37,7 @@
         <ul class="hidden md:flex space-x-6">
           <li><a href="#hero" class="nav-link hover:text-blue-500">Home</a></li>
           <li><a href="#about" class="nav-link hover:text-blue-500">About Me</a></li>
+          <li><a href="#skills" class="nav-link hover:text-blue-500">Skills</a></li>
           <li><a href="#portfolio" class="nav-link hover:text-blue-500">Portfolio</a></li>
           <li><a href="#contact" class="nav-link hover:text-blue-500">Contact</a></li>
         </ul>
@@ -84,7 +86,49 @@ On a personal note, I have always enjoyed art and crafts. While I don't consider
         </div>
       </div>
     </section>
+    <!-- Skills & Languages -->
+    <section id="skills" class="py-20 bg-gray-100" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-8 text-center">Skills & Languages</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
+          <!-- Skills -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Technical Skills</h4>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>Programming Languages:</strong> C++, C, C#, HTML, CSS, JavaScript, Python and Java</li>
+              <li><strong>Game Engines:</strong> Unity</li>
+              <li><strong>3D Modeling:</strong> Blender and AutoCAD</li>
+              <li><strong>Version Control:</strong> Git</li>
+              <li><strong>IDE & Tools:</strong> Microsoft Visual Studio</li>
+              <li><strong>Project Management:</strong> Agile methodology using Scrum</li>
+              <li><strong>Testing:</strong> QA, Test Automation and Basic testing techniques</li>
+              <li><strong>Multithreading:</strong> Experience with concurrent programming</li>
+              <li><strong>Deep Learning:</strong> Basic knowledge</li>
+              <li><strong>Data Formats:</strong> Proficient in JSON and txt</li>
+              <li><strong>Platforms:</strong> PlayStation 5, Mobile and PC</li>
+            </ul>
+          </div>
+
+          <!-- Languages -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Languages</h4>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>Spanish:</strong> Native</li>
+              <li><strong>English:</strong> B2 </li>
+            </ul>
+            <h4 class="text-xl font-semibold mt-8 mb-4">Other Strengths</h4>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Creative and solutions-oriented mindset</li>
+              <li>Strong attention to detail and organization</li>
+              <li>Ability to work independently and collaboratively</li>
+              <li>Commitment to continuous learning and improvement</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
     <!-- Portfolio -->
     <section id="portfolio" class="py-20 bg-gray-100" data-aos="fade-left">
       <div class="container mx-auto px-4">
@@ -172,15 +216,17 @@ On a personal note, I have always enjoyed art and crafts. While I don't consider
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-200 py-6">
-    <div class="container mx-auto px-4 flex justify-center space-x-6">
-      <a href="https://www.linkedin.com/in/cristina-mora-velasco" class="hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
-      <a href="https://discord.com/users/753263537752768642" class="hover:text-white"><i class="fab fa-discord fa-lg"></i></a>
-      <a href="https://github.com/CristinaMora" class="hover:text-white"><i class="fab fa-github fa-lg"></i></a>
-      <a href="mailto:cristinamv10@gmail.com" class="hover:text-white"><i class="fas fa-envelope fa-lg"></i></a>
-      <a href="tel:+34664638811" class="hover:text-white"><i class="fas fa-phone fa-lg"></i></a>
+ <footer class="bg-gray-800 text-gray-200 py-10">
+  <div class="container mx-auto px-4 flex flex-col items-center space-y-4">
+    <h4 class="text-lg font-semibold">Find me here</h4>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://www.linkedin.com/in/cristina-mora-velasco" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">LinkedIn</a>
+      <a href="https://github.com/CristinaMora" target="_blank" class="bg-gray-700 hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition">GitHub</a>
+      <a href="mailto:moravelascocristina@gmail.com" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition">Email</a>
+      <a href="tel:+34664638811" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition">Call Me</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
