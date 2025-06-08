@@ -46,20 +46,75 @@
       </div>
     </section>
 
-    <!-- Project Details -->
+  <!-- Inserted into your original HTML: Project Details section modified -->
     <section class="py-20 bg-white" data-aos="fade-right">
       <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-semibold mb-6">Game Overview</h3>
         <p class="mb-6">
-          In this project, we used SDL to recreate the classic arcade game Asteroids. The player's objective is to destroy all asteroids by shooting at them. If you get hit three times, you lose the game. There are two types of asteroids in the game: regular ones, which move in a fixed direction, and golden ones, which chase the player.
+          <strong>Asteroids</strong> is a complete remake of the classic arcade game developed using <strong>SDL2</strong>, structured around an <strong>Entity-Component-System (ECS)</strong> architecture. It offers both single-player and two-player online multiplayer modes. This project was developed in collaboration with my colleague <strong>Laura</strong>.
         </p>
-        <p class="mb-8">
-          The game logic was structured using a system-based architecture, allowing us to organize functions into specific modules. One of these systems handles the online mode, enabling players to engage in PvP matches with another player if both devices are on the same network and share their IP address. This architecture not only simplified the development process but also made it easier to integrate extra features, such as online gameplay, creating a more dynamic and engaging experience for players.
+        <p class="mb-6">
+          The gameplay revolves around controlling a fighter spaceship, navigating through an asteroid field, and avoiding collisions. The player can rotate, accelerate, and shoot bullets to destroy incoming asteroids. There are two types of asteroids: <em>white</em> (with random movement) and <em>yellow</em> (which pursue the player).
         </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Technology Stack</h3>
+        <ul class="list-disc pl-5 mb-6">
+          <li><strong>Language:</strong> C++</li>
+          <li><strong>Graphics:</strong> SDL2 + SDL_image</li>
+          <li><strong>Networking:</strong> SDL_net (UDP communication)</li>
+          <li><strong>Audio:</strong> SDL_mixer</li>
+          <li><strong>Architecture:</strong> ECS (Entity-Component-System)</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">What is ECS?</h3>
+        <p class="mb-6">
+          ECS (Entity-Component-System) is a design pattern widely used in game development. It separates data (components) from logic (systems) and entities are simple identifiers that group components. This promotes high modularity and performance.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Core Architecture</h3>
+        <p class="mb-6">
+          The game is structured using a robust ECS architecture:
+        </p>
+        <ul class="list-disc pl-5 mb-6">
+          <li><strong>Entities:</strong> Game objects such as fighters, asteroids, bullets.</li>
+          <li><strong>Components:</strong> Encapsulate properties like Transform, Health, Callback, FramedImage, etc.</li>
+          <li><strong>Systems:</strong> Logic handlers such as FighterSystem, BulletSystem, AsteroidsSystem, GameCtrlSystem, NetworkSystem, and RenderSystem.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Networking</h3>
+        <p class="mb-6">
+          The multiplayer mode is implemented using <strong>UDP sockets</strong> via <code>SDL_net</code>. The system supports host-client architecture, where one player starts as the server and the other connects using the host's IP. Communication is done through lightweight <code>Messagenet</code> structures:
+        </p>
+        <ul class="list-disc pl-5 mb-6">
+          <li>Messages like <code>_m_CONNECTED</code>, <code>_m_FIGHTERPOSUP</code>, <code>_m_ADDBULLET</code> are used for synchronization.</li>
+          <li>Systems handle serialization and deserialization of game state.</li>
+          <li>NetworkSystem reacts to messages and relays game updates.</li>
+        </ul>
+        <p class="mb-6">
+          <strong>Why UDP over TCP?</strong> We used UDP because for fast-paced games, it's preferable to lose some packets than to introduce latency or delay waiting for retransmission, as happens with TCP. Real-time experience takes priority over perfect reliability.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Gameplay Features</h3>
+        <ul class="list-disc pl-5 mb-6">
+          <li><strong>Arcade-style combat:</strong> Rotate and shoot bullets with a cooldown.</li>
+          <li><strong>Asteroid generation:</strong> New ones spawn every few seconds.</li>
+          <li><strong>Round and life system:</strong> 3 lives per player; game ends upon depletion.</li>
+          <li><strong>Game State Machine:</strong> Controls transitions between Main Menu, Play, Pause, End State, etc.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Gameplay Demonstration</h3>
+        <ul class="list-disc pl-5 mb-8">
+          <li><a href="https://www.youtube.com/watch?v=JXIG6Zw7rWA" target="_blank" class="text-blue-600 hover:underline">Single Player Gameplay</a></li>
+          <li><a href="https://www.youtube.com/watch?v=I0SW6wkBUFI" target="_blank" class="text-blue-600 hover:underline">Two Player Multiplayer Gameplay</a></li>
+        </ul>
+
         <div class="text-center">
           <a href="https://github.com/CristinaMora/AsteroidsVideogame" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Repository</a>
         </div>
       </div>
     </section>
+
+
 
      <!-- Footer -->
   <footer class="bg-gray-800 text-gray-200 py-10">

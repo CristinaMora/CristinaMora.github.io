@@ -47,13 +47,46 @@
     </section>
 
     <!-- Project Details -->
-    <section class="py-20 bg-white" data-aos="fade-right">
-      <div class="container mx-auto px-4">
-        <p class="mb-8">
-          A project developed with SDL that combines exploration with beat 'em up mechanics. The player must control the four protagonists and work as a team to rescue their fifth sibling. The game's world is designed to encourage both action and cooperative strategy.
-        </p>
-      </div>
-    </section>
+   <section class="py-20 bg-white" data-aos="fade-right">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">Game Overview</h3>
+      <p class="mb-6">
+        <strong>The Fifth Element</strong> is a hybrid game that combines classic <em>beat 'em up</em> combat with top-down exploration mechanics. The story begins with the player receiving a letter from a deceased sibling, prompting a quest to reunite the remaining four siblings scattered across five elemental kingdoms. Throughout the journey, the player must overcome enemies representing different elemental types and recruit each sibling into their team. The game allows seamless switching between siblings during combat to exploit elemental weaknesses and develop team-based strategies.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Technology Stack</h3>
+      <ul class="list-disc pl-5 mb-6">
+        <li><strong>Engine:</strong> SDL</li>
+        <li><strong>Language:</strong> C++</li>
+        <li><strong>Tools:</strong> Custom built systems without external libraries</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Core Architecture</h3>
+      <p class="mb-6">
+        The project initially used a classic inheritance-based architecture with a generic <code>Entity</code> class. As the scope expanded, the team transitioned to a component-based architecture to support greater flexibility and maintainability. Game states are managed via a singleton <code>GameStateMachine</code>, responsible for activating and disposing of each game state cleanly. The architecture supports two primary modes: a top-down overworld mode for exploration, and a side-view beat 'em up mode for combat sequences.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Gameplay Features</h3>
+      <ul class="list-disc pl-5 mb-6">
+        <li>Dual gameplay: <strong>Top-Down Exploration</strong> and <strong>Beat 'Em Up Combat</strong></li>
+        <li><strong>Element-based combat:</strong> enemies and characters aligned with elemental themes</li>
+        <li><strong>Character switching:</strong> real-time sibling swap during battles</li>
+        <li><strong>Narrative-driven progression</strong> through five unique kingdoms</li>
+        <li><strong>Recruitment mechanic:</strong> each sibling joins as the story advances</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Development Context</h3>
+      <p class="mb-6">
+        This project stood out for the freedom it offered in both gameplay and narrative design. Our group consisted of eleven members, which required structured coordination. I led weekly meetings and worked to maintain a relaxed, productive environment. Being involved in nearly every development area gave me a holistic understanding of game creation, from technical systems to team dynamics.
+      </p>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Resources</h3>
+      <ul class="list-disc pl-5 mb-6">
+        <li><a href="https://github.com/UCM-FDI-DISIA/Selery-Studios" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a></li>
+        <li><a href="https://ucm-fdi-disia.github.io/Selery-Studios/" target="_blank" class="text-blue-600 hover:underline">Official Webpage</a></li>
+      </ul>
+    </div>
+  </section>
+
     
      <!-- Footer -->
   <footer class="bg-gray-800 text-gray-200 py-10">

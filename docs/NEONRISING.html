@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neon Rising - Cristina Mora</title>
   <link rel="icon" href="images/Cletter.jpg" type="image/jpeg">
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animations -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
@@ -46,19 +44,76 @@
       </div>
     </section>
 
-    <!-- Project Details -->
     <section class="py-20 bg-white" data-aos="fade-right">
       <div class="container mx-auto px-4">
-        <p class="mb-8">
-          Neon Rising was my first project in Unity. It is a vertical platformer where you must use your bow to kill enemies and teleport to where the arrow hits, as you climb to reach the person who killed your father when you were a child. In this project, I was responsible for programming the functionality of the platforms and the procedural level generation. I also created all the sprites for platforms, backgrounds, menus, and enemies. It was the first project that taught me how to code, work as a team, manage tasks, and many other valuable lessons.
+        <h3 class="text-3xl font-semibold mb-6">Game Overview</h3>
+        <p class="mb-6">
+          <strong>Neon Rising</strong> is a dynamic vertical platformer developed in Unity using C#. It features a complete narrative in which the protagonist must ascend to confront the person who murdered their father in childhood. The player uses a bow not only as a weapon but also as a teleportation tool, allowing creative mobility through levels filled with enemies and platform challenges. Almost all assets, from sprites to background environments and interface elements, were handcrafted by me.
         </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Technology Stack</h3>
+        <ul class="list-disc pl-5 mb-6">
+          <li><strong>Engine:</strong> Unity</li>
+          <li><strong>Language:</strong> C#</li>
+          <li><strong>Tools:</strong> Unity Editor (no external plugins)</li>
+          <li><strong>Managers Implemented:</strong> Game Manager, Audio Manager, UI Manager, Level Manager, Random Manager</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Core Architecture</h3>
+        <p class="mb-6">
+          The game is structured around a modular manager-based architecture to handle core systems such as audio, UI, level control, and procedural content. The game contains two fixed levels (tutorial and a main level) designed manually for precision gameplay and story pacing. In addition, there is a fully procedural game mode where platforms and enemy configurations are generated dynamically. Game logic is component-driven and follows clear separation of concerns between player input, physics, collision, and UI.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Gameplay Features</h3>
+        <ul class="list-disc pl-5 mb-6">
+          <li><strong>Bow mechanics:</strong> switch between combat arrow and teleport arrow modes</li>
+          <li><strong>Teleportation:</strong> instantly move to the arrow’s impact point</li>
+          <li><strong>Dash:</strong> fast movement in the direction of the mouse</li>
+          <li><strong>Platform variety:</strong> solid, grates, clouds (disappearing), moving platforms</li>
+          <li><strong>Enemies:</strong> various enemy types plus a final boss</li>
+          <li><strong>Vertical camera constraint:</strong> players must climb fast enough or lose</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Game Loop & Progression</h3>
+        <p class="mb-6">
+          The player progresses through a vertically scrolling level, evading or defeating enemies using arrow types. The camera scrolls upward at a constant rate, forcing the player to ascend continuously. If the player falls below the camera view or touches a lethal trap/enemy, the level resets. The game begins with a tutorial level, followed by the main fixed level which concludes in a boss battle. For extended gameplay and replayability, a procedural mode offers new challenges in each session. A full run typically lasts between 20 and 45 minutes.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Development Context</h3>
+        <p class="mb-6">
+          This was my first full game development project, carried out as part of a university course. The team originally consisted of six people, but after the first week one member left the degree, and the workload was redistributed among the remaining five. I was responsible for the procedural level generation system and the complete functionality of the platforming mechanics. In addition, I created most of the visual assets, including characters, interface elements, and background environments.
+        </p>
+        <p class="mb-6">
+          This experience was a turning point for me. I learned core programming practices in C#, how to manage partial team loss under time pressure, and how to adapt iteratively while delivering a functional game. It also taught me the importance of structuring game logic modularly and anticipating edge cases when designing player interaction systems.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Guerrilla Showcase</h3>
+        <p class="mb-6">
+          In 2023, we showcased <strong>Neon Rising</strong> at the Guerrilla event hosted at our university. The game received an excellent reception from attendees, and we gathered insightful feedback from players and professionals alike. It was a motivating experience that highlighted the strengths of our design and helped us reflect on areas for improvement.
+        </p>
+        <div class="text-center my-8">
+          <img src="images/guerrilla.png" alt="Guerrilla Showcase" class="mx-auto rounded shadow-md" />
+        </div>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Telemetry & Game Analytics</h3>
+        <p class="mb-6">
+          We are currently collaborating with a new group to develop a telemetry system for games. This system is already being integrated into <strong>Neon Rising</strong> to monitor metrics such as level complexity, player behavior, and the effectiveness of enemy types. The data allows us to balance gameplay, refine enemy placement, and ensure difficulty scales appropriately. It's a practical tool that enhances the development process through measurable insights.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Documentation</h3>
+        <ul class="list-disc pl-5 mb-6">
+          <li><a href="https://docs.google.com/document/d/1WufKYlI7_KCj6EsVImKMvbsftrnC7ihX__WmBZe0TAM/edit?usp=sharing" target="_blank" class="text-blue-600 hover:underline">Game Design Document (GDD)</a></li>
+        </ul>
+
         <div class="text-center">
-          <a href="https://sjulvez.wixsite.com/-neonrising" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Website</a>
+          <a href="https://github.com/Proyectos1-FDI-UCM/c2022-Grupo06" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Repository</a>
         </div>
       </div>
     </section>
 
-     <!-- Footer -->
+  </main>
+
+  <!-- Footer -->
   <footer class="bg-gray-800 text-gray-200 py-10">
     <div class="container mx-auto px-4 flex flex-col items-center space-y-4">
       <h4 class="text-lg font-semibold">Find me here</h4>
