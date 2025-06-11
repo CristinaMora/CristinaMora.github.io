@@ -37,14 +37,14 @@
 
   <main class="pt-24">
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white" data-aos="fade-up">
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white" data-aos="fade-up">
       <div class="text-center px-4">
         <h2 class="text-4xl md:text-6xl font-extrabold mb-4" style="color: #facc15;">VERY REAL</h2>
       </div>
     </section>
 
     <!-- Project Details -->
-    <section class="py-20 bg-white" data-aos="fade-right">
+    <section id="about" class="py-20 bg-white" data-aos="fade-right">
       <div class="container mx-auto px-4 space-y-6">
         <p><strong>Very Real</strong> is a modular game engine written in C++ and built from scratch with <em>Ogre</em> for rendering, <em>SDL</em> for window and input management, <em>FMOD</em> for audio, <em>Bullet</em> for physics simulation, and <em>Lua</em> for level scripting.</p>
         <p>The engine is designed to run games dynamically by loading them as DLLs at runtime. This ensures a full decoupling between engine and game logic, so developers can build games without modifying the engine source. The DLLs are automatically linked after the engine initializes the necessary systems and singletons.</p>
@@ -60,25 +60,30 @@
           <li><strong>ECS Architecture</strong>: Core built on a dynamic Entity-Component-System model with modular creation via factory classes.</li>
         </ul>
 
-        <p>The engine was structured in collaborative pairs within a team of 11, dividing responsibility across modules while ensuring cohesion. This workflow helped coordinate efforts in systems like physics and input, as well as maintaining a modular and reusable structure.</p>
-
         <h3 class="text-lg font-semibold mt-8">Related Repositories</h3>
-<div class="space-y-4">
-  <div>
-    <p class="font-semibold">Ogreman</p>
-    <p class="text-sm text-gray-700 mb-1">A survival horror experience where the player must collect notes and avoid a patrolling creature using stealth and strategy. Ogreman adapts its pursuit with sound-based detection and A* pathfinding.</p>
-    <a href="https://github.com/UCM-FDI-DISIA/Ogreman" target="_blank" class="text-blue-600 underline hover:text-blue-800">View Ogreman Repository</a>
-  </div>
-  <div>
-    <p class="font-semibold">Oveja Vegana</p>
-    <p class="text-sm text-gray-700 mb-1">An arcade-style game inspired by Brotato, where the player controls a sheep that defends itself from hunters using projectiles and pickups across timed waves.</p>
-    <a href="https://github.com/UCM-FDI-DISIA/OvejaVegana" target="_blank" class="text-blue-600 underline hover:text-blue-800">View Oveja Vegana Repository</a>
-  </div>
-</div>
+        <div class="space-y-4">
+          <div>
+            <p class="font-semibold">Ogreman</p>
+            <p class="text-sm text-gray-700 mb-1">A survival horror experience where the player must collect notes and avoid a patrolling creature using stealth and strategy. Ogreman adapts its pursuit with sound-based detection and A* pathfinding.</p>
+            <!-- Video Embed -->
+            <div class="mt-4">
+              <video controls class="w-full max-w-lg mx-auto rounded-lg shadow-lg">
+                <source src="images/ogreman.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <a href="https://github.com/UCM-FDI-DISIA/Ogreman" target="_blank" class="text-blue-600 underline hover:text-blue-800">View Ogreman Repository</a>
+          </div>
+          <div>
+            <p class="font-semibold">Oveja Vegana</p>
+            <p class="text-sm text-gray-700 mb-1">An arcade-style game inspired by Brotato, where the player controls a sheep that defends itself from hunters using projectiles and pickups across timed waves.</p>
+            <a href="https://github.com/UCM-FDI-DISIA/OvejaVegana" target="_blank" class="text-blue-600 underline hover:text-blue-800">View Oveja Vegana Repository</a>
+          </div>
+        </div>
 
         <p>My primary responsibilities included leading the coordination of the team and defining task distribution, ensuring an efficient and collaborative development workflow. I managed the engine's automated build system through custom <code>.bat</code> scripts, and implemented key parts of the rendering pipeline such as the render window, camera system, animator integration and mesh rendering. I also fully developed the UI system, covering all visual interface components.</p>
 
-<p>Additionally, I contributed to the engine’s export and packaging process, performed code reviews, provided support to other modules, and was responsible for identifying and eliminating memory leaks to ensure stability and robustness across the project.</p>
+        <p>Additionally, I contributed to the engine’s export and packaging process, performed code reviews, provided support to other modules, and was responsible for identifying and eliminating memory leaks to ensure stability and robustness across the project.</p>
         <p>This project was developed by a team of 11 using pair programming and Agile principles, resulting in a functional, extensible engine and two fully playable games.</p>
 
         <div class="text-center">
@@ -89,12 +94,18 @@
 
     <!-- UML Diagram -->
     <section class="py-16 bg-gray-50" data-aos="fade-up">
-  <div class="container mx-auto px-4 text-center">
-    <h3 class="text-2xl font-bold mb-6">Engine Architecture Overview</h3>
-    <img src="images/VR.png" alt="Very Real Architecture Diagram" class="mx-auto shadow-lg rounded" />
-  </div>
-</section>
-
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-6">Engine Architecture Overview</h3>
+        <img src="images/VR.png" alt="Very Real Architecture Diagram" class="mx-auto shadow-lg rounded" />
+      </div>
+    </section>
+<!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-50" data-aos="fade-in">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-6">Equipo de Desarrollo</h3>
+        <img src="images/veryrealgrupo.jpeg" alt="Equipo de Desarrollo completo" class="mx-auto shadow-lg rounded-lg" />
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
