@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JustTwinBeaver - Cristina Mora</title>
+  <link rel="icon" href="images/Cletter.jpg" type="image/jpeg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <img src="images/avatar.jpg" alt="Avatar" class="w-10 h-10 rounded-full" />
+        <h1 class="text-xl font-bold">Cristina Mora</h1>
+      </div>
+      <nav>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html#hero" class="hover:text-blue-500">Home</a></li>
+          <li><a href="index.html#about" class="hover:text-blue-500">About Me</a></li>
+          <li><a href="#skills" class="nav-link hover:text-blue-500">Skills</a></li>
+          <li><a href="index.html#portfolio" class="hover:text-blue-500">Portfolio</a></li>
+          <li><a href="index.html#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white" data-aos="fade-up">
+      <div class="text-center px-4">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4" style="color: #facc15;">JUST TWIN BEAVER</h2>
+      </div>
+    </section>
+
+    <!-- Team and Event -->
+    <section id="about" class="py-20 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4 space-y-6">
+        <h3 class="text-2xl font-semibold mb-2">Project Background</h3>
+        <p>
+          This game was developed during 4 days for <strong>ComJamOn 2025</strong>, a local game jam hosted at <strong>Universidad Complutense of Madrid</strong>. The theme of the jam was <strong>"Branches"</strong>.
+        </p>
+        <p>
+          We formed the team <em>Huevos Revueltos</em>. I participated as a <strong>programmer</strong>, mainly working with <strong>Unity</strong> and <strong>C#</strong>.
+        </p>
+        <p>
+          It was my first time working exclusively with designers, artists, and sound specialists, and the experience couldn’t have been better! We collaborated intensively and efficiently, with ideas flowing freely and mutual support pushing the project forward.
+        </p>
+        <p>
+          The final result was <strong>Just Twin Beaver</strong>, a game that emerged from a shared creative vision, developed under tight deadlines but with a strong spirit of teamwork and experimentation.
+        </p>
+
+        <h4 class="text-xl font-semibold mt-6 mb-2">Team Members</h4>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Francisco Miguel Galván – Gameplay Programming</li>
+          <li>Cristina Mora Velasco – Gameplay Programming</li>
+          <li>Victor Herrero – Gameplay Programming</li>
+          <li>Francisco Blümel Araya – Gameplay Design and Production</li>
+          <li>Younes Zaizoun – Programming</li>
+          <li>Ignacio Lumbano – Programming</li>
+          <li>Ian Jasper Frew – Programming</li>
+          <li>Eva Robles Haloui – Art</li>
+          <li>Nerea Herreros López – Music Composition</li>
+          <li>Pablo Gavira – SFX Design</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Project Details -->
+    <section id="project" class="py-20 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4 space-y-12">
+
+        <!-- Game Description -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">What is Just Twin Beaver?</h2>
+          <p class="text-lg">
+            <strong>Just Twin Beaver</strong> is a chaotic competitive game where twin beavers, <strong>Tady</strong> and <strong>Dom</strong>, battle to destroy each other's dam first—while keeping their own intact.
+            The twist? <em>You have to share the controls!</em> Each player uses a stick, leading to either teamwork or total disaster. And of course, conflicts are settled by flinging cans using sticks held in your mouths.
+          </p>
+        </div>
+
+        <!-- Controls -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Controls</h3>
+          <p class="mb-2"><strong>Keyboard or Gamepad</strong></p>
+          <ul class="list-disc list-inside space-y-1">
+            <li><strong>Player 1:</strong> WASD or Left Stick</li>
+            <li><strong>Player 2:</strong> Arrow Keys or Right Stick</li>
+            <li><strong>Gamepad:</strong> Press Start / Option to begin</li>
+          </ul>
+        </div>
+
+        <!-- Why Play -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Why should you play this?</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Angry beavers in a legendary sibling showdown.</li>
+            <li>High-speed can fights that defy both physics and logic.</li>
+            <li>We love beavers. You love beavers.</li>
+            <li>Also, how many games let you throw cans with a stick in your mouth? Exactly.</li>
+          </ul>
+        </div>
+
+        
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-100 text-center" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-4">Acknowledgements</h3>
+        <p class="mb-6">A huge thank you to the entire team, to all the other participants, and of course, to the event organizers.</p>
+        <a href="https://lnkd.in/dt4CYhed" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">See Just Twin Beaver</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-10">
+    <div class="container mx-auto px-4 flex flex-col items-center space-y-4">
+      <h4 class="text-lg font-semibold">Find me here</h4>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://www.linkedin.com/in/cristina-mora-velasco" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">LinkedIn</a>
+        <a href="https://github.com/CristinaMora" target="_blank" class="bg-gray-700 hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition">GitHub</a>
+        <a href="mailto:moravelascocristina@gmail.com" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition">Email</a>
+        <a href="tel:+34664638811" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition">Call Me</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
